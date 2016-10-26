@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'sqlite3'
 gem 'rails', '4.2.7'
+gem 'bcrypt-ruby', '3.1.2'
 gem "twitter-bootstrap-rails"
 group :development, :test do
-    gem 'sqlite3'
     gem 'guard-rspec'
     gem 'rspec-rails', '3.5.0'
 end
@@ -26,6 +27,6 @@ group :doc do
 end
 
 group :production do
-    gem 'pg', '0.15.1'
+  gem 'pg', '0.15.1'
     gem 'rails_12factor', '0.0.2'
 end
