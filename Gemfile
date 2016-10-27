@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'sqlite3'
 gem 'rails', '4.2.7'
 gem 'bcrypt-ruby', '3.1.2'
 gem "twitter-bootstrap-rails"
@@ -22,6 +21,7 @@ gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
+gem 'turbolinks', '2.3.0'
 gem 'jbuilder', '1.0.2'
 
 group :doc do
