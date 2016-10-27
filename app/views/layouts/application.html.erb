@@ -40,6 +40,7 @@
   <body>
 
      <%= render 'layouts/header' %>
+
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -59,7 +60,14 @@
     </div>
 
     <div class="container">
+
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+
       <div class="row">
+
+
         <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
@@ -80,6 +88,7 @@
       <footer>
         <%= render 'layouts/footer' %>
         <p>&copy; Company 2016</p>
+        <%= debug(params) if Rails.env.development? %>
       </footer>
 
     </div> <!-- /container -->
